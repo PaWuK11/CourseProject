@@ -57,7 +57,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xs-2">
-                        <div id="fh5co-logo"><a href="/"><i class="icon-study"></i>Educ<span>.</span></a></div>
+                        <div id="fh5co-logo"><a href="/"><i class="icon-study"></i>МБФК</a></div>
                     </div>
                     <div class="col-xs-10 text-right menu-1">
                         <ul>
@@ -149,7 +149,7 @@
         <div class="container">
             <div class="row animate-box">
                 <div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
-                    <h2>Course categories</h2>
+                    <h2>Спеціальності</h2>
                     <p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
                 </div>
             </div>
@@ -157,54 +157,10 @@
                 <div class="col-md-3 col-sm-6 text-center animate-box">
                     <div class="services">
 						<span class="icon">
-							<i class="icon-shop"></i>
+							<i class="icon-truck2"></i>
 						</span>
                         <div class="desc">
-                            <h3><a href="#">Business</a></h3>
-                            <p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 text-center animate-box">
-                    <div class="services">
-						<span class="icon">
-							<i class="icon-heart4"></i>
-						</span>
-                        <div class="desc">
-                            <h3><a href="#">Health &amp; Psychology</a></h3>
-                            <p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 text-center animate-box">
-                    <div class="services">
-						<span class="icon">
-							<i class="icon-banknote"></i>
-						</span>
-                        <div class="desc">
-                            <h3><a href="#">Accounting</a></h3>
-                            <p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 text-center animate-box">
-                    <div class="services">
-						<span class="icon">
-							<i class="icon-lab2"></i>
-						</span>
-                        <div class="desc">
-                            <h3><a href="#">Science &amp; Technology</a></h3>
-                            <p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 text-center animate-box">
-                    <div class="services">
-						<span class="icon">
-							<i class="icon-photo"></i>
-						</span>
-                        <div class="desc">
-                            <h3><a href="#">Art &amp; Media</a></h3>
+                            <h3><a href="/">Автомобільний транспорт</a></h3>
                             <p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
                         </div>
                     </div>
@@ -215,7 +171,7 @@
 							<i class="icon-home-outline"></i>
 						</span>
                         <div class="desc">
-                            <h3><a href="#">Real Estate</a></h3>
+                            <h3><a href="#">Будівництво та експлуатація будівель і споруд</a></h3>
                             <p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
                         </div>
                     </div>
@@ -223,10 +179,10 @@
                 <div class="col-md-3 col-sm-6 text-center animate-box">
                     <div class="services">
 						<span class="icon">
-							<i class="icon-bubble3"></i>
+							<i class="icon-photo"></i>
 						</span>
                         <div class="desc">
-                            <h3><a href="#">Language</a></h3>
+                            <h3><a href="#">Опорядження будівель і споруд та будівельний дизайн</a></h3>
                             <p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
                         </div>
                     </div>
@@ -234,13 +190,14 @@
                 <div class="col-md-3 col-sm-6 text-center animate-box">
                     <div class="services">
 						<span class="icon">
-							<i class="icon-world"></i>
+							<i class="icon-banknote"></i>
 						</span>
                         <div class="desc">
-                            <h3><a href="#">Web &amp; Programming</a></h3>
+                            <h3><a href="#">Облік та оподаткування</a></h3>
                             <p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
                         </div>
                     </div>
+                </div>
                 </div>
             </div>
         </div>
@@ -255,22 +212,22 @@
                         <div class="col-md-3 col-sm-6 text-center animate-box">
                             <span class="icon"><i class="icon-world"></i></span>
                             <span class="fh5co-counter js-counter" data-from="0" data-to="3297" data-speed="5000" data-refresh-interval="50"></span>
-                            <span class="fh5co-counter-label">Foreign Followers</span>
+                            <span class="fh5co-counter-label">Студентів з інших країн</span>
                         </div>
                         <div class="col-md-3 col-sm-6 text-center animate-box">
                             <span class="icon"><i class="icon-study"></i></span>
                             <span class="fh5co-counter js-counter" data-from="0" data-to="3700" data-speed="5000" data-refresh-interval="50"></span>
-                            <span class="fh5co-counter-label">Students Enrolled</span>
+                            <span class="fh5co-counter-label">Випускників</span>
                         </div>
                         <div class="col-md-3 col-sm-6 text-center animate-box">
                             <span class="icon"><i class="icon-bulb"></i></span>
                             <span class="fh5co-counter js-counter" data-from="0" data-to="5034" data-speed="5000" data-refresh-interval="50"></span>
-                            <span class="fh5co-counter-label">Classes Complete</span>
+                            <span class="fh5co-counter-label">Груп які завершили навчання</span>
                         </div>
                         <div class="col-md-3 col-sm-6 text-center animate-box">
                             <span class="icon"><i class="icon-head"></i></span>
                             <span class="fh5co-counter js-counter" data-from="0" data-to="1080" data-speed="5000" data-refresh-interval="50"></span>
-                            <span class="fh5co-counter-label">Certified Teachers</span>
+                            <span class="fh5co-counter-label">Кваліфікованих викладачів</span>
                         </div>
                     </div>
                 </div>
@@ -282,52 +239,52 @@
         <div class="container">
             <div class="row animate-box">
                 <div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
-                    <h2>Our Course</h2>
+                    <h2>Майбутні перспективи</h2>
                     <p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-6 animate-box">
                     <div class="course">
-                        <a href="#" class="course-img" style="background-image: url(#);">
+                        <a href="#" class="course-img" style="background-image: url(https://tk.lntu.edu.ua/wp-content/uploads/2022/01/1.jpg);">
                         </a>
                         <div class="desc">
-                            <h3><a href="#">Web Master</a></h3>
-                            <p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
-                            <span><a href="#" class="btn btn-primary btn-sm btn-course">Take A Course</a></span>
+                            <h3><a href="#">Автомобільний механік</a></h3>
+                            <p>Автомобільний механік виконує обстеження, технічне обслуговування та ремонт двигунів, механічних вузлів та систем легкових, вантажних автомобілів та інших транспортних засобів.</p>
+                            <span><a href="#" class="btn btn-primary btn-sm btn-course">Детальніше</a></span>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 animate-box">
                     <div class="course">
-                        <a href="#" class="course-img" style="background-image: url(#);">
+                        <a href="#" class="course-img" style="background-image: url(https://media.slovoidilo.ua/media/scimage/159/158460-uk.png);">
                         </a>
                         <div class="desc">
-                            <h3><a href="#">Business &amp; Accounting</a></h3>
-                            <p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
-                            <span><a href="#" class="btn btn-primary btn-sm btn-course">Take A Course</a></span>
+                            <h3><a href="#">Технік-будівельник</a></h3>
+                            <p>DТехнік-будівельник бере зразки, аналізує їх, випробовує сировину та матеріали, що використовуються в будівництві. Він готує документацію про результати проведених випробувань для практичного використання в будівельній галузі.</p>
+                            <span><a href="#" class="btn btn-primary btn-sm btn-course">Детальніше</a></span>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 animate-box">
                     <div class="course">
-                        <a href="#" class="course-img" style="background-image: url(#);">
+                        <a href="#" class="course-img" style="background-image: url(https://images.wapcar.my/file1/6916418b47a94cd18138b43811808e22_800.jpg);">
                         </a>
                         <div class="desc">
-                            <h3><a href="#">Science &amp; Technology</a></h3>
-                            <p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
-                            <span><a href="#" class="btn btn-primary btn-sm btn-course">Take A Course</a></span>
+                            <h3><a href="#"> Технік-дизайнер</a></h3>
+                            <p>Спеціаліст з комплексного архітектурно-дизайнерського проектування основних видів архітектурного середовища - інтер'єрів з їх обладнанням, міських відкритих просторів, що наповнюють їх будівель та споруд різного призначення та характеру.</p>
+                            <span><a href="#" class="btn btn-primary btn-sm btn-course">Детальніше</a></span>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 animate-box">
                     <div class="course">
-                        <a href="#" class="course-img" style="background-image: url(#);">
+                        <a href="#" class="course-img" style="background-image: url(https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/advisor/wp-content/uploads/2022/03/Image_-_Business_Analyst_.jpeg.jpg);">
                         </a>
                         <div class="desc">
-                            <h3><a href="#">Health &amp; Psychology</a></h3>
-                            <p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
-                            <span><a href="#" class="btn btn-primary btn-sm btn-course">Take A Course</a></span>
+                            <h3><a href="#">Фінансовий аналітик</a></h3>
+                            <p>Унікальна спеціальність, яка пов’язана зі створенням та управлінням інформацією про усі, без винятку, процеси в діяльності сучасного підприємства та держави в цілому.</p>
+                            <span><a href="#" class="btn btn-primary btn-sm btn-course">Детальніше</a></span>
                         </div>
                     </div>
                 </div>
@@ -448,123 +405,6 @@
                             <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="fh5co-pricing" class="fh5co-bg-section">
-        <div class="container">
-            <div class="row animate-box">
-                <div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
-                    <h2>Plan &amp; Pricing</h2>
-                    <p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="pricing pricing--rabten">
-                    <div class="col-md-4 animate-box">
-                        <div class="pricing__item">
-                            <div class="wrap-price">
-                                <!-- <div class="icon icon-user2"></div> -->
-                                <h3 class="pricing__title">Trial</h3>
-                                <!-- <p class="pricing__sentence">Single user license</p> -->
-                            </div>
-                            <div class="pricing__price">
-                        <span class="pricing__anim pricing__anim--1">
-								<span class="pricing__currency">$</span>0
-                        </span>
-                                <span class="pricing__anim pricing__anim--2">
-								<span class="pricing__period">per year</span>
-                        </span>
-                            </div>
-                            <div class="wrap-price">
-                                <ul class="pricing__feature-list">
-                                    <li class="pricing__feature">One Day Trial</li>
-                                    <li class="pricing__feature">Limited Courses</li>
-                                    <li class="pricing__feature">Free 3 Lessons</li>
-                                    <li class="pricing__feature">No Supporter</li>
-                                    <li class="pricing__feature">No Tutorial</li>
-                                    <li class="pricing__feature">No Ebook</li>
-                                    <li class="pricing__feature">Limited Registered User</li>
-                                </ul>
-                                <button class="pricing__action">Choose plan</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 animate-box">
-                        <div class="pricing__item">
-                            <div class="wrap-price">
-                                <!-- <div class="icon icon-store"></div> -->
-                                <h3 class="pricing__title">Silver</h3>
-                                <!-- <p class="pricing__sentence">Up to 5 users</p> -->
-                            </div>
-                            <div class="pricing__price">
-                        <span class="pricing__anim pricing__anim--1">
-								<span class="pricing__currency">$</span>79
-                        </span>
-                                <span class="pricing__anim pricing__anim--2">
-								<span class="pricing__period">per year</span>
-                        </span>
-                            </div>
-                            <div class="wrap-price">
-                                <ul class="pricing__feature-list">
-                                    <li class="pricing__feature">One Year Standard Access</li>
-                                    <li class="pricing__feature">Limited Courses</li>
-                                    <li class="pricing__feature">300+ Lessons</li>
-                                    <li class="pricing__feature">Random Supporter</li>
-                                    <li class="pricing__feature">View Only Ebook</li>
-                                    <li class="pricing__feature">Standard Tutorials</li>
-                                    <li class="pricing__feature">Unlimited Registered User</li>
-                                </ul>
-                                <button class="pricing__action">Choose plan</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 animate-box">
-                        <div class="pricing__item">
-                            <div class="wrap-price">
-                                <!-- <div class="icon icon-home2"></div> -->
-                                <h3 class="pricing__title">Gold</h3>
-                                <!-- <p class="pricing__sentence">Unlimited users</p> -->
-                            </div>
-                            <div class="pricing__price">
-                        <span class="pricing__anim pricing__anim--1">
-								<span class="pricing__currency">$</span>499
-                        </span>
-                                <span class="pricing__anim pricing__anim--2">
-								<span class="pricing__period">per year</span>
-                        </span>
-                            </div>
-                            <div class="wrap-price">
-                                <ul class="pricing__feature-list">
-                                    <li class="pricing__feature">Life Time Access</li>
-                                    <li class="pricing__feature">Unlimited All Courses</li>
-                                    <li class="pricing__feature">7000+ Lessons &amp; Growing</li>
-                                    <li class="pricing__feature">Free Supporter</li>
-                                    <li class="pricing__feature">Free Ebook Downloads</li>
-                                    <li class="pricing__feature">Premium Tutorials</li>
-                                    <li class="pricing__feature">Unlimited Registered User</li>
-                                </ul>
-                                <button class="pricing__action">Choose plan</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="fh5co-register" style="background-image: url(#);">
-        <div class="overlay"></div>
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 animate-box">
-                <div class="date-counter text-center">
-                    <h2>Get 400 of Online Courses for Free</h2>
-                    <h3>By Mike Smith</h3>
-                    <div class="simply-countdown simply-countdown-one"></div>
-                    <p><strong>Limited Offer, Hurry Up!</strong></p>
-                    <p><a href="#" class="btn btn-primary btn-lg btn-reg">Register Now!</a></p>
                 </div>
             </div>
         </div>
