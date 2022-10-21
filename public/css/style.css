@@ -542,10 +542,10 @@ h1, h2, h3, h4, h5, h6, figure {
   }
 }
 .course .course-img {
-  background-size: auto;
-  background-position: center center;
-  background-repeat: no-repeat;
-  position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: inline-block;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
