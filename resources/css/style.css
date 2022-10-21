@@ -7,7 +7,7 @@
 }
 /* =======================================================
 *
-* 	Template Style 
+* 	Template Style
 *
 * ======================================================= */
 body {
@@ -298,9 +298,10 @@ h1, h2, h3, h4, h5, h6, figure {
   overflow: hidden;
 }
 #fh5co-hero .flexslider .slides li {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: inline-block;
   min-height: 630px;
   height: 630px;
   position: relative;
@@ -542,10 +543,10 @@ h1, h2, h3, h4, h5, h6, figure {
   }
 }
 .course .course-img {
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: inline-block;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
