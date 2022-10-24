@@ -41,6 +41,10 @@
     <!-- Theme style  -->
     <link rel="stylesheet" href="../css/style.css">
 
+
+    <link rel="stylesheet" href="../../css/register.css">
+
+
     <!-- Modernizr JS -->
     <script src="../js/modernizr-2.6.2.min.js"></script>
 </head>
@@ -52,39 +56,67 @@
         <div class="top-menu">
             <div class="container">
                 <div class="row">
-                    <div class="col-xs-2">
-                        <div id="fh5co-logo"><a href="{{route('home')}}"><i class="icon-study"></i>МБФК</a></div>
+                    <div class="col-xs-3" style="font-size: 17px">
+                        <div id="fh5co-logo"><a href="{{route('home')}}"><span class="icon-MBFC"></span>Маріупольський будівельний коледж</a></div>
                     </div>
-                    <div class="col-xs-10 text-right menu-1">
+                    <div class="col-xs-9 text-right menu-1" style="padding-top: 25px;">
                         <ul>
                             <li class="active"><a href="{{route('home')}}">Головна</a></li>
                             <li class="has-dropdown">
-                                <a href="#">Коледж</a>
+                                <a href="{{route('home')}}">Коледж</a>
                                 <ul class="dropdown">
                                     <li><a href="{{route('history')}}">Історія</a></li>
-                                    <li><a href="#">Психологічна служба</a></li>
+                                    <li><a href="#">Адмін склад</a></li>
+                                    <li><a href="#">Циклова комісія</a></li>
+                                    <li><a href="#">Структура</a></li>
                                     <li><a href="#">Спеціальності</a></li>
+                                    <li><a href="#">Психологічна служба</a></li>
+                                    <li><a href="#">Ліцензії та сертефікати</a></li>
+                                    <li><a href="#">Звіт директора</a></li>
+                                    <li><a href="#">Матеріали акредетації</a></li>
+                                    <li><a href="#">Виховна робота</a></li>
+                                </ul>
+                            </li>
+                            <li class="has-dropdown">
+                                <a href="#">Абітурієнту</a>
+                                <ul class="dropdown">
+                                    <li><a href="#">Документи для вступу (після 9 класу)</a></li>
+                                    <li><a href="#">Документи для вступу (після 11 класу)</a></li>
+                                    <li><a href="#">Документи для вступу (після ПТУ)</a></li>
+                                    <li><a href="#">Освітні центри "Донбас Україна"</a></li>
+                                    <li><a href="#">Освітні центри "Крим Україна"</a></li>
+                                    <li><a href="#">Рішення приймальної комісії</a></li>
+                                    <li><a href="#">Вартість навчання</a></li>
                                 </ul>
                             </li>
                             <li class="has-dropdown">
                                 <a href="#">Студенту</a>
                                 <ul class="dropdown">
-                                    <li><a href="#">Абітурієнту</a></li>
-                                    <li><a href="#">Викладачу</a></li>
-                                    <li><a href="#">Життя коледжу. Фото і відеогалерея</a></li>
-                                    <li><a href="#">Освітні центри "Донбас Україна", "Крим Україна"</a></li>
-                                    <li><a href="#">Конференції "Перспектива 20**"</a></li>
-                                    <li><a href="#">Виховна робота</a></li>
+                                    <li><a href="#">Навчально методицні матеріали з дисциплін</a></li>
+                                    <li><a href="#">Денне віділення</a></li>
+                                    <li><a href="#">Заочне віділення</a></li>
+                                </ul>
+                            </li>
+                            <li class="has-dropdown">
+                                <a href="{{route('teacher')}}">Викладачу</a>
+                                <ul class="dropdown">
+                                    <li><a href="{{route('teacher')}}">Викладачі</a></li>
+                                    <li><a href="#">Навчально методицні матеріали з дисциплін</a></li>
                                 </ul>
                             </li>
                             <li class="has-dropdown">
                                 <a href="#">Публічна інформація</a>
                                 <ul class="dropdown">
                                     <li><a href="#">Розклад занять</a></li>
-                                    <li><a href="#">Інтернет-приймальня</a></li>
+                                    <li><a href="#">Життя коледжу</a></li>
+                                    <li><a href="#">Бібліотека</a></li>
+                                    <li><a href="#">Протидія корупції</a></li>
+                                    <li><a href="#">Перспектива 20**</a></li>
+                                    <li><a href="{{route('contact')}}">Контактна інформація</a></li>
                                 </ul>
                             </li>
-                            <li><a href="{{route('contact')}}">Контактна інформація</a></li>
+                            <li class="btn-cta"><a href="#"><span>Увійти</span></a></li>
+                            <li class="btn-cta"><a href="{{route('register')}}"><span>Створити акаунт</span></a></li>
                         </ul>
                     </div>
                 </div>

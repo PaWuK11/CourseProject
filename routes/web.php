@@ -3,6 +3,8 @@
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HistoryController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\TeacherController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,5 +24,8 @@ Route::get('/contact',[ContactController::class, 'contact'])->name('contact');
 
 Route::get('/history',[HistoryController::class, 'history'])->name('history');
 
+Route::get('/teacher',[TeacherController::class, 'teacher'])->name('teacher');
 
+Route::get('/register',[UserController::class, 'create'])->name('register');
 
+Route::post('/register',[UserController::class, 'store']);
