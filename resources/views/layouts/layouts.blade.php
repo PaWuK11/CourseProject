@@ -50,7 +50,6 @@
 </head>
 <body>
 <div class="fh5co-loader"></div>
-
 <div id="page">
     <nav class="fh5co-nav" role="navigation">
         <div class="top-menu">
@@ -63,60 +62,65 @@
                         <ul>
                             <li class="active"><a href="{{route('home')}}">Головна</a></li>
                             <li class="has-dropdown">
-                                <a href="{{route('home')}}">Коледж</a>
+                                <a href="#">Коледж</a>
                                 <ul class="dropdown">
                                     <li><a href="{{route('history')}}">Історія</a></li>
-                                    <li><a href="#">Адмін склад</a></li>
-                                    <li><a href="#">Циклова комісія</a></li>
-                                    <li><a href="#">Структура</a></li>
-                                    <li><a href="#">Спеціальності</a></li>
-                                    <li><a href="#">Психологічна служба</a></li>
-                                    <li><a href="#">Ліцензії та сертефікати</a></li>
-                                    <li><a href="#">Звіт директора</a></li>
-                                    <li><a href="#">Матеріали акредетації</a></li>
-                                    <li><a href="#">Виховна робота</a></li>
+                                    <li><a href="{{route('admin_staff')}}">Адмін склад</a></li>
+                                    <li><a href="{{route('cyclical_commission')}}">Циклова комісія</a></li>
+                                    <li><a href="{{route('structural')}}">Структура</a></li>
+                                    <li><a href="{{route('specialties')}}">Спеціальності</a></li>
+                                    <li><a href="{{route('psychological')}}">Психологічна служба</a></li>
+                                    <li><a href="{{route('licenses')}}">Ліцензії та сертефікати</a></li>
+                                    <li><a href="{{route('directors_report')}}">Звіт директора</a></li>
+                                    <li><a href="{{route('accreditation_materials')}}">Матеріали акредетації</a></li>
+                                    <li><a href="{{route('educational_activities')}}">Виховна робота</a></li>
                                 </ul>
                             </li>
                             <li class="has-dropdown">
                                 <a href="#">Абітурієнту</a>
                                 <ul class="dropdown">
-                                    <li><a href="#">Документи для вступу (після 9 класу)</a></li>
-                                    <li><a href="#">Документи для вступу (після 11 класу)</a></li>
-                                    <li><a href="#">Документи для вступу (після ПТУ)</a></li>
-                                    <li><a href="#">Освітні центри "Донбас Україна"</a></li>
-                                    <li><a href="#">Освітні центри "Крим Україна"</a></li>
-                                    <li><a href="#">Рішення приймальної комісії</a></li>
-                                    <li><a href="#">Вартість навчання</a></li>
+                                    <li><a href="{{route('documents_9')}}">Документи для вступу (після 9 класу)</a></li>
+                                    <li><a href="{{route('documents_11')}}">Документи для вступу (після 11 класу)</a></li>
+                                    <li><a href="{{route('documents_PTU')}}">Документи для вступу (після ПТУ)</a></li>
+                                    <li><a href="{{route('DonbasIsUkraine')}}">Освітні центри "Донбас Україна"</a></li>
+                                    <li><a href="{{route('CrimeaIsUkraine')}}">Освітні центри "Крим Україна"</a></li>
+                                    <li><a href="{{route('decision')}}">Рішення приймальної комісії</a></li>
+                                    <li><a href="{{route('cost')}}">Вартість навчання</a></li>
                                 </ul>
                             </li>
                             <li class="has-dropdown">
                                 <a href="#">Студенту</a>
                                 <ul class="dropdown">
-                                    <li><a href="#">Навчально методицні матеріали з дисциплін</a></li>
-                                    <li><a href="#">Денне віділення</a></li>
-                                    <li><a href="#">Заочне віділення</a></li>
+                                    <li><a href="{{route('stud_metod_material')}}">Навчально методицні матеріали з дисциплін</a></li>
+                                    <li><a href="{{route('day_department')}}">Денне віділення</a>
+                                    <li><a href="{{route('night_department')}}">Заочне віділення</a></li>
                                 </ul>
                             </li>
                             <li class="has-dropdown">
-                                <a href="{{route('teacher')}}">Викладачу</a>
+                                <a href="#">Викладачу</a>
                                 <ul class="dropdown">
                                     <li><a href="{{route('teacher')}}">Викладачі</a></li>
-                                    <li><a href="#">Навчально методицні матеріали з дисциплін</a></li>
+                                    <li><a href="{{route('metodi_material')}}">Навчально методицні матеріали з дисциплін</a></li>
                                 </ul>
                             </li>
                             <li class="has-dropdown">
                                 <a href="#">Публічна інформація</a>
                                 <ul class="dropdown">
-                                    <li><a href="#">Розклад занять</a></li>
-                                    <li><a href="#">Життя коледжу</a></li>
-                                    <li><a href="#">Бібліотека</a></li>
-                                    <li><a href="#">Протидія корупції</a></li>
-                                    <li><a href="#">Перспектива 20**</a></li>
+                                    <li><a href="{{route('timetable')}}">Розклад занять</a></li>
+                                    <li><a href="{{route('collage_life')}}">Життя коледжу</a></li>
+                                    <li><a href="{{route('library')}}">Бібліотека</a></li>
+                                    <li><a href="{{route('corruption')}}">Протидія корупції</a></li>
+                                    <li><a href="{{route('prospect')}}">Перспектива 20**</a></li>
                                     <li><a href="{{route('contact')}}">Контактна інформація</a></li>
                                 </ul>
                             </li>
-                            <li class="btn-cta"><a href="#"><span>Увійти</span></a></li>
-                            <li class="btn-cta"><a href="{{route('register')}}"><span>Створити акаунт</span></a></li>
+                            @if(auth()->check())
+                                <li class="btn-cta"><span style="font-size: 20px; color: #0b0b0b;">{{auth()->user()->name}}</span></li>
+                                <li class="btn-cta"><a href="{{route('logout')}}"><span>Вийти з акаунта</span></a></li>
+                            @else
+                                <li class="btn-cta"><a href="{{route('login.create')}}"><span>Увійти</span></a></li>
+                                <li class="btn-cta"><a href="{{route('register.create')}}"><span>Створити акаунт</span></a></li>
+                            @endif
                         </ul>
                     </div>
                 </div>

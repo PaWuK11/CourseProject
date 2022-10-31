@@ -28,43 +28,29 @@
                 <img src="../../images/img-01.png" alt="IMG">
             </div>
 
-            <form method="post" action="{{route('register.store')}}">
+            <form method="post" action="{{route('login')}}">
                 @csrf
 
 
-					<span class="login100-form-title">Реєстрація</span>
+                <span class="login100-form-title">Вхід</span>
 
-                <div class="wrap-input100 validate-input" data-validate = "Ви не ввели ім'я">
-                    <label for="name">
-                        <input class="input100" type="text" name="name" placeholder="Ім'я" value="{{old('name')}}">
-                        <span class="focus-input100"></span>
-                    </label>
-                </div>
-
-                <div class="wrap-input100 validate-input" data-validate = "Поле пусте або неправильний формат адреси">
+                <div class="wrap-input100 validate-input" data-validate = "Не існуюча пошта">
                     <label for="email">
                         <input class="input100" type="text" name="email" placeholder="Пошта"  value="{{old('email')}}">
                         <span class="focus-input100"></span>
                     </label>
                 </div>
 
-                <div class="wrap-input100 validate-input" data-validate = "Поле пусте або мало символів">
+                <div class="wrap-input100 validate-input" data-validate = "Не правильний пароль">
                     <label for="password">
                         <input class="input100 password" type="password" id="password" name="password" placeholder="Пароль">
                         <span class="focus-input100"></span>
                     </label>
                 </div>
 
-                <div class="wrap-input100 validate-input" data-validate = "Поле пусте або мало символів">
-                    <label for="password_confirmation">
-                        <input class="input100 password_confirmation" id="password_confirmation" type="password" name="password_confirmation" placeholder="Пароль">
-                        <span class="focus-input100"></span>
-                    </label>
-                </div>
-
                 <div class="container-login100-form-btn">
                     <button class="login100-form-btn">
-                        Створити
+                        Увійти
                     </button>
                 </div>
 
@@ -75,10 +61,9 @@
                 </div>
 
                 <div class="text-center p-t-136">
-                    Уже існує акаунт?
-                    <a class="txt" href="{{route('login.create')}}">
-                        Увійти
-                        <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+                    Не існує акаунта?
+                    <a class="txt" href="{{route('register.create')}}">
+                        Зареєструйтесь
                     </a>
                 </div>
             </form>
