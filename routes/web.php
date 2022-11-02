@@ -90,6 +90,8 @@ Route::get('/prospect',[PublicController::class, 'prospect'])->name('prospect');
 
 Route::get('/contact',[ContactController::class, 'contact'])->name('contact');
 
+Route::match(['get', 'post'],'/send',[ContactController::class, 'send'])->name('send');
+
 //Registration and Sign
 
 Route::get('/register',[UserController::class, 'create'])->name('register.create');

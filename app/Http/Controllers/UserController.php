@@ -26,7 +26,6 @@ class UserController extends Controller
             'password' => Hash::make($request->password)
         ]);
 
-        session()->flush('success', 'Successful registration');
         Auth::login($user);
         return redirect()->home();
     }

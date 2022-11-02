@@ -2,7 +2,6 @@
 
 namespace App\Mail;
 
-use http\Message\Body;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
@@ -10,7 +9,7 @@ use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
-class Contact extends Mailable
+class Send extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -27,12 +26,36 @@ class Contact extends Mailable
     }
 
     /**
+     * Get the message envelope.
+     *
+     * @return \Illuminate\Mail\Mailables\Envelope
+     */
+    public function envelope()
+    {
+        return new Envelope(
+            subject: 'Send',
+        );
+    }
+
+    /**
      * Get the message content definition.
      *
-     * @return $this
+     * @return \Illuminate\Mail\Mailables\Content
      */
     public function content()
     {
-        return $this->view('send');
+        return new Content(
+            view: 'send',
+        );
+    }
+
+    /**
+     * Get the attachments for the message.
+     *
+     * @return array
+     */
+    public function attachments()
+    {
+        return [];
     }
 }
