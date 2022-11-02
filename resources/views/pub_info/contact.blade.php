@@ -19,7 +19,7 @@
                 </div>
                 <div class="col-md-6 animate-box">
                     <h3>Зв'язатись</h3>
-                    <form method="post" action="{{route('send')}}">
+                    <form method="post" action="/send">
                         @csrf
                         <div class="row form-group">
                             <div class="col-md-6">

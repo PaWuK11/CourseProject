@@ -90,7 +90,7 @@ Route::get('/prospect',[PublicController::class, 'prospect'])->name('prospect');
 
 Route::get('/contact',[ContactController::class, 'contact'])->name('contact');
 
-Route::match(['get', 'post'],'/send',[ContactController::class, 'send'])->name('send');
+Route::match(['get', 'post'],'/send',[ContactController::class, 'send']);
 
 //Registration and Sign
 

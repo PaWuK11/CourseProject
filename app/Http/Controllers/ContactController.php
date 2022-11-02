@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 
-use App\Mail\Send;
+use App\Mail\ContactMail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
@@ -30,12 +30,12 @@ class ContactController extends Controller
             $body .= "<p><b>Пошта: </b> {$request->input('email')}</p>";
             $body .= "<p><b>Тема: </b> {$request->input('tem')}</p>";
             $body .= "<p><b>Повідомлення: </b><br> " . nl2br($request->input('message')) . "</p>";
+
+            Mail::to('2@mail.com')->send(new ContactMail($body));
+
+            return redirect('/contact');
         }
-
-        Mail::to('bodya@mail.com')->send(new Send($body));
-        $request->session()->flash('success','Negro');
-
-        return view('send');
+        return view('/contact');
     }
 }
 
