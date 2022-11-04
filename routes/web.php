@@ -1,11 +1,13 @@
 <?php
 
 
+use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\ApplicantController;
 use App\Http\Controllers\CollageController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PublicController;
+use App\Http\Controllers\SpecialController;
 use App\Http\Controllers\StudentsController;
 use App\Http\Controllers\TeacherController;
 use App\Http\Controllers\UserController;
@@ -90,16 +92,34 @@ Route::get('/prospect',[PublicController::class, 'prospect'])->name('prospect');
 
 Route::get('/contact',[ContactController::class, 'contact'])->name('contact');
 
+Route::match(['get', 'post'],'/send',[ContactController::class, 'send']);
+
 //Registration and Sign
 
-Route::get('/register',[UserController::class, 'create'])->name('register.create');
+Route::group(['middleware' => 'guest'], function (){
 
-Route::post('/register',[UserController::class, 'store'])->name('register.store');
+    Route::get('/register',[UserController::class, 'create'])->name('register.create');
 
-Route::get('/login', [UserController::class, 'loginForm'])->name('login.create');
+    Route::post('/register',[UserController::class, 'store'])->name('register.store');
 
-Route::post('/login', [UserController::class, 'login'])->name('login');
+    Route::get('/login', [UserController::class, 'loginForm'])->name('login.create');
 
-Route::get('/logout', [UserController::class, 'logout'])->name('logout');
+    Route::post('/login', [UserController::class, 'login'])->name('login');
+});
 
+Route::get('/logout', [UserController::class, 'logout'])->name('logout')->middleware('auth');
+
+//Special
+
+Route::get('/at',[SpecialController::class, 'at'])->name('at');
+
+Route::get('/built',[SpecialController::class, 'built'])->name('built');
+
+Route::get('/design',[SpecialController::class, 'design'])->name('design');
+
+Route::get('/ek',[SpecialController::class, 'ek'])->name('ek');
+
+//Admin
+
+Route::get('/admin',[AdminController::class, 'index'])->middleware('admin');
 

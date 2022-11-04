@@ -62,7 +62,7 @@
 							<i class="icon-truck2"></i>
 						</span>
                         <div class="desc">
-                            <h3><a href="/">Автомобільний транспорт</a></h3>
+                            <h3><a href="{{route('at')}}">Автомобільний транспорт</a></h3>
                             <p>Охоплює усі питання пов'язані з експлуатацією, обслуговуванням та ремонтом автомобілів.</p>
                         </div>
                     </div>
@@ -73,7 +73,7 @@
 							<i class="icon-home-outline"></i>
 						</span>
                         <div class="desc">
-                            <h3><a href="#">Будівництво та експлуатація будівель і споруд</a></h3>
+                            <h3><a href="{{route('built')}}">Будівництво та експлуатація будівель і споруд</a></h3>
                             <p>Будівництво є частиною матеріальної культури суспільства, за ним можна судити про прогрес науки і техніки, особливості побуту, національні традиції.</p>
                         </div>
                     </div>
@@ -84,7 +84,7 @@
 							<i class="icon-photo"></i>
 						</span>
                         <div class="desc">
-                            <h3><a href="#">Опорядження будівель і споруд та будівельний дизайн</a></h3>
+                            <h3><a href="{{route('design')}}">Опорядження будівель і споруд та будівельний дизайн</a></h3>
                             <p>Технік будівельник-дизайнер проходить підготовку для діяльності в будівельних, проектних, дизайнерських, конструкторських організаціях та їх підрозділах, які виконують будівництво та опорядження житлових, цивільних і промислових будівель та споруд.</p>
                         </div>
                     </div>
@@ -95,7 +95,7 @@
 							<i class="icon-banknote"></i>
 						</span>
                         <div class="desc">
-                            <h3><a href="#">Облік та оподаткування</a></h3>
+                            <h3><a href="{{route('ek')}}">Облік та оподаткування</a></h3>
                             <p>Це найбільш приваблива економічна спеціальність для тих, хто хоче зрозуміти загальні принципи формування економічної інформації, яка використовується для управління підприємствами, організаціями, установами. </p>
                         </div>
                     </div>
@@ -147,45 +147,45 @@
             <div class="row">
                 <div class="col-md-6 animate-box">
                     <div class="course">
-                        <a href="#" class="course-img" style="background-image: url(https://tk.lntu.edu.ua/wp-content/uploads/2022/01/1.jpg);">
+                        <a href="{{route('at')}}" class="course-img" style="background-image: url(https://ctk.cv.ua/wp-content/uploads/2021/04/service-artcity-1024x683-1.jpg);">
                         </a>
                         <div class="desc">
-                            <h3><a href="#">Автомобільний механік</a></h3>
+                            <h3><a href="{{route('at')}}">Автомобільний механік</a></h3>
                             <p>Автомобільний механік виконує обстеження, технічне обслуговування та ремонт двигунів, механічних вузлів та систем легкових, вантажних автомобілів та інших транспортних засобів.</p>
-                            <span><a href="#" class="btn btn-primary btn-sm btn-course">Детальніше</a></span>
+                            <span><a href="{{route('at')}}" class="btn btn-primary btn-sm btn-course">Детальніше</a></span>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 animate-box">
                     <div class="course">
-                        <a href="#" class="course-img" style="background-image: url(https://media.slovoidilo.ua/media/scimage/159/158460-uk.png);">
+                        <a href="{{route('built')}}" class="course-img" style="background-image: url(https://media.slovoidilo.ua/media/scimage/159/158460-uk.png);">
                         </a>
                         <div class="desc">
-                            <h3><a href="#">Технік-будівельник</a></h3>
+                            <h3><a href="{{route('built')}}">Технік-будівельник</a></h3>
                             <p>Технік-будівельник бере зразки, аналізує їх, випробовує сировину та матеріали, що використовуються в будівництві. Він готує документацію про результати проведених випробувань для практичного використання в будівельній галузі.</p>
-                            <span><a href="#" class="btn btn-primary btn-sm btn-course">Детальніше</a></span>
+                            <span><a href="{{route('built')}}" class="btn btn-primary btn-sm btn-course">Детальніше</a></span>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 animate-box">
                     <div class="course">
-                        <a href="#" class="course-img" style="background-image: url(https://images.wapcar.my/file1/6916418b47a94cd18138b43811808e22_800.jpg);">
+                        <a href="{{route('design')}}" class="course-img" style="background-image: url(https://images.wapcar.my/file1/6916418b47a94cd18138b43811808e22_800.jpg);">
                         </a>
                         <div class="desc">
-                            <h3><a href="#"> Технік-дизайнер</a></h3>
+                            <h3><a href="{{route('design')}}"> Технік-дизайнер</a></h3>
                             <p>Спеціаліст з комплексного архітектурно-дизайнерського проектування основних видів архітектурного середовища - інтер'єрів з їх обладнанням, міських відкритих просторів, що наповнюють їх будівель та споруд різного призначення та характеру.</p>
-                            <span><a href="#" class="btn btn-primary btn-sm btn-course">Детальніше</a></span>
+                            <span><a href="{{route('design')}}" class="btn btn-primary btn-sm btn-course">Детальніше</a></span>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 animate-box">
                     <div class="course">
-                        <a href="#" class="course-img" style="background-image: url(https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/advisor/wp-content/uploads/2022/03/Image_-_Business_Analyst_.jpeg.jpg);">
+                        <a href="{{route('ek')}}" class="course-img" style="background-image: url(https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/advisor/wp-content/uploads/2022/03/Image_-_Business_Analyst_.jpeg.jpg);">
                         </a>
                         <div class="desc">
-                            <h3><a href="#">Фінансовий аналітик</a></h3>
+                            <h3><a href="{{route('ek')}}">Фінансовий аналітик</a></h3>
                             <p>Унікальна спеціальність, яка пов’язана зі створенням та управлінням інформацією про усі, без винятку, процеси в діяльності сучасного підприємства та держави в цілому.</p>
-                            <span><a href="#" class="btn btn-primary btn-sm btn-course">Детальніше</a></span>
+                            <span><a href="{{route('ek')}}" class="btn btn-primary btn-sm btn-course">Детальніше</a></span>
                         </div>
                     </div>
                 </div>

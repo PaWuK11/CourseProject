@@ -19,29 +19,30 @@
                 </div>
                 <div class="col-md-6 animate-box">
                     <h3>Зв'язатись</h3>
-                    <form action="#">
+                    <form method="post" action="/send">
+                        @csrf
                         <div class="row form-group">
                             <div class="col-md-6">
                                 <!-- <label for="fname">First Name</label> -->
-                                <input type="text" id="fname" class="form-control" placeholder="Прізвище">
+                                <input type="text" id="fname" name="fname" class="form-control" placeholder="Прізвище">
                             </div>
                             <div class="col-md-6">
                                 <!-- <label for="lname">Last Name</label> -->
-                                <input type="text" id="lname" class="form-control" placeholder="Ім'я">
+                                <input type="text" id="lname" name="lname" class="form-control" placeholder="Ім'я">
                             </div>
                         </div>
 
                         <div class="row form-group">
                             <div class="col-md-12">
                                 <!-- <label for="email">Email</label> -->
-                                <input type="text" id="email" class="form-control" placeholder="Пошта">
+                                <input type="text" id="email" name="email" class="form-control" placeholder="Пошта">
                             </div>
                         </div>
 
                         <div class="row form-group">
                             <div class="col-md-12">
                                 <!-- <label for="subject">Subject</label> -->
-                                <input type="text" id="subject" class="form-control" placeholder="Тема цього повідомлення">
+                                <input type="text" id="subject" name="tem" class="form-control" placeholder="Тема цього повідомлення">
                             </div>
                         </div>
 
