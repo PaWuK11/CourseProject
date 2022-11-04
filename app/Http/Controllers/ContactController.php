@@ -31,7 +31,7 @@ class ContactController extends Controller
             $body .= "<p><b>Тема: </b> {$request->input('tem')}</p>";
             $body .= "<p><b>Повідомлення: </b><br> " . nl2br($request->input('message')) . "</p>";
 
-            Mail::to('2@mail.com')->send(new ContactMail($body));
+            Mail::to('mbfk@mail.com')->send(new ContactMail($body));
 
             return redirect('/contact');
         }
