@@ -17,10 +17,9 @@ class AdminMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
-       if (Auth::check() && Auth::user()->is_admin){
-           return $next($request);
-
-       }
-       abort('404');
+        if(!auth()->user()->is_admin){
+            abort('404', 'Page Not Found');
+        }
+        return $next($request);
     }
 }

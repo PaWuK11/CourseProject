@@ -24,7 +24,7 @@
 
     <div id="fh5co-about">
         <div class="container">
-            <div class="col-md-6 animate-box">
+            <div style="opacity: 1 !important;" class="col-md-6 animate-box">
                 <span>Про сам коледж</span>
                 <h2>Вітаємо у Маріупольському будівельному фаховому коледжі</h2>
                 <p>Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat cauctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per Mauris in erat justo.</p>

@@ -2,11 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\View\View;
 
 class CollageController extends Controller
 {
-    public function history()
+    /**
+     * @return Application|Factory|View
+     */
+    public function history(): View|Factory|Application
     {
         return view('collage.history');
     }

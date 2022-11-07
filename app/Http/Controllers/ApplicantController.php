@@ -1,42 +1,67 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\View\View;
 
 class ApplicantController extends Controller
 {
-    public function documents_9()
+    /**
+     * @return Factory|View|Application
+     */
+    public function documents_9(): Factory|View|Application
     {
         return view('applicant.documents_9');
     }
 
-    public function documents_11()
+    /**
+     * @return Factory|View|Application
+     */
+    public function documents_11(): Factory|View|Application
     {
         return view('applicant.documents_11');
     }
 
-    public function documents_PTU()
+    /**
+     * @return Factory|View|Application
+     */
+    public function documents_PTU(): Factory|View|Application
     {
         return view('applicant.documents_PTU');
     }
 
-    public function Donbas()
+    /**
+     * @return Application|Factory|View
+     */
+    public function Donbas(): View|Factory|Application
     {
         return view('applicant.DonbasIsUkraine');
     }
 
-    public function Crimea()
+    /**
+     * @return Application|Factory|View
+     */
+    public function Crimea(): View|Factory|Application
     {
         return view('applicant.CrimeaIsUkraine');
     }
 
-    public function decision()
+    /**
+     * @return Application|Factory|View
+     */
+    public function decision(): View|Factory|Application
     {
         return view('applicant.decision');
     }
 
-    public function cost()
+    /**
+     * @return Application|Factory|View
+     */
+    public function cost(): View|Factory|Application
     {
         return view('applicant.cost');
     }

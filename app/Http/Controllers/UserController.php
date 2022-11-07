@@ -1,19 +1,26 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\View\View;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
-    public function create(){
-        return view('user.create');
-    }
-
-    public function store(Request $request){
+    /**
+     * @param Request $request
+     * @return RedirectResponse
+     */
+    public function store(Request $request): RedirectResponse
+    {
         $request->validate([
             'name' => 'required',
             'email' => 'required|email|unique:users',
@@ -21,8 +28,8 @@ class UserController extends Controller
         ]);
 
         $user = User::create([
-            'name'=>$request->name,
-            'email'=>$request->email,
+            'name' => $request->name,
+            'email' => $request->email,
             'password' => Hash::make($request->password)
         ]);
 
@@ -30,12 +37,19 @@ class UserController extends Controller
         return redirect()->home();
     }
 
-    public function loginForm()
+    /**
+     * @return Application|Factory|View
+     */
+    public function create(): View|Factory|Application
     {
-        return view('user.login');
+        return view('user.create');
     }
 
-    public function login(Request $request)
+    /**
+     * @param Request $request
+     * @return RedirectResponse
+     */
+    public function login(Request $request): RedirectResponse
     {
         $request->validate([
             'email' => 'required|email',
@@ -43,16 +57,27 @@ class UserController extends Controller
         ]);
 
         if (Auth::attempt([
-            'email'=> $request->email,
-            'password'=>$request->password,
-        ])){
+            'email' => $request->email,
+            'password' => $request->password,
+        ])) {
             return redirect()->home();
         }
 
         return redirect()->back();
     }
 
-    public function logout()
+    /**
+     * @return Application|Factory|View
+     */
+    public function loginForm(): View|Factory|Application
+    {
+        return view('user.login');
+    }
+
+    /**
+     * @return RedirectResponse
+     */
+    public function logout(): RedirectResponse
     {
         Auth::logout();
         return redirect()->route('home');

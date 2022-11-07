@@ -115,8 +115,8 @@
                                 </ul>
                             </li>
                             @if(auth()->check())
-                                <li class="btn-cta"><span style="font-size: 20px; color: #0b0b0b;">{{auth()->user()->name}}</span></li>
-                                <li class="btn-cta"><a href="{{route('logout')}}"><span>Вийти з акаунта</span></a></li>
+                                <li><a href="{{route('admin')}}"><span style="font-size: 20px; color: #0b0b0b;">{{auth()->user()->name}}</span></li>
+                                <li class="btn-cta"><a href="{{route('logout')}}"></a></li>
                             @else
                                 <li class="btn-cta"><a href="{{route('login.create')}}"><span>Увійти</span></a></li>
                                 <li class="btn-cta"><a href="{{route('register.create')}}"><span>Створити акаунт</span></a></li>

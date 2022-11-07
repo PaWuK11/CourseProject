@@ -121,5 +121,5 @@ Route::get('/ek',[SpecialController::class, 'ek'])->name('ek');
 
 //Admin
 
-Route::get('/admin',[AdminController::class, 'index'])->middleware('admin');
+Route::get('/dashboard',[AdminController::class, 'index'])->middleware('admin')->name('admin');
 
