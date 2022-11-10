@@ -120,6 +120,20 @@ Route::get('/design',[SpecialController::class, 'design'])->name('design');
 Route::get('/ek',[SpecialController::class, 'ek'])->name('ek');
 
 //Admin
+Route::group(['middleware' => 'admin'], function (){
 
-Route::get('/dashboard',[AdminController::class, 'index'])->middleware('admin')->name('admin');
+    Route::get('/dashboard',[AdminController::class, 'index'])->name('admin');
+
+    Route::get('/posts',[AdminController::class, 'view_posts'])->name('view_posts');
+
+    Route::get('/create',[AdminController::class, 'create_posts'])->name('create_posts');
+
+    Route::post('/create',[AdminController::class, 'create_post'])->name('create_post');
+
+    Route::get('/posts',[AdminController::class, 'edit_posts'])->name('edit_posts');;
+
+    Route::put('/update_post/{id}', [AdminController::class, 'update'])->name('update_post');
+});
+
+
 

@@ -115,12 +115,19 @@
                                 </ul>
                             </li>
                             @if(auth()->check())
-                                <li><a href="{{route('admin')}}"><span style="font-size: 20px; color: #0b0b0b;">{{auth()->user()->name}}</span></li>
-                                <li class="btn-cta"><a href="{{route('logout')}}"></a></li>
+                                @if(auth()->user()->is_admin)
+                                    <li><a href="{{route('admin')}}"><span style="font-size: 20px; color: #0b0b0b;">{{auth()->user()->name}}</span></li>
+                                    <li class="btn-cta"><a href="{{route('logout')}}"></a></li>
+                                @else
+                                    <li><a href="{{route('home')}}"><span style="font-size: 20px; color: #0b0b0b;">{{auth()->user()->name}}</span></li>
+                                    <li class="btn-cta"><a href="{{route('logout')}}"></a></li>
+                                @endif
                             @else
                                 <li class="btn-cta"><a href="{{route('login.create')}}"><span>Увійти</span></a></li>
                                 <li class="btn-cta"><a href="{{route('register.create')}}"><span>Створити акаунт</span></a></li>
                             @endif
+
+
                         </ul>
                     </div>
                 </div>
