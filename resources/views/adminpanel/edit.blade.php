@@ -89,7 +89,7 @@
                     <ul class="nav flex-column sub-menu">
                         <li class="nav-item"><a class="nav-link" href="{{route('view_posts')}}">Переглянути</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{route('create_posts')}}">Створити</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{{route('edit_posts')}}">Редагувати</a></li>
+                        <li class="nav-item">Редагувати</li>
 
                     </ul>
                 </div>
@@ -112,26 +112,25 @@
     </nav>
 
     <div class="col-md-6 animate-box">
-        <h3>Створення статті</h3>
-        <form role="form" method="post" action="{{route('update_post'.$post->id)}}">
+        <h3>Редагування статі</h3>
+        <form role="form" method="post" action="{{route('/posts/'. $post->id. '/update')}}">
             @csrf
             @method('PUT')
-
             <div class="row form-group">
                 <div class="col-md-12">
                     <!-- <label for="subject">Subject</label> -->
-                    <input type="text" id="title" name="title" value="{{$post->title}}" class="form-control" placeholder="Тема">
+                    <input type="text" id="title" name="title" value="{{$post->title}}" class="form-control">
                 </div>
             </div>
 
             <div class="row form-group">
                 <div class="col-md-12">
                     <!-- <label for="message">Message</label> -->
-                    <textarea name="content" id="content" cols="30" rows="10" class="form-control" placeholder="Основний текст">{{$post->content}}</textarea>
+                    <textarea name="content" id="content" cols="30" rows="10" class="form-control">{{$post->content}}</textarea>
                 </div>
             </div>
             <div class="form-group">
-                <input type="submit"  value="Запостити" class="btn btn-primary">
+                <input type="submit"  value="Оновити" class="btn btn-primary">
             </div>
         </form>
     </div>

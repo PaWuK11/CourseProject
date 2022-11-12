@@ -56,13 +56,10 @@ class AdminController extends Controller
     }
 
 
-    /**
-     * @return Factory|View|Application
-     */
-    public function edit_posts($id): Factory|View|Application
+
+    public function show()
     {
-        $post = Post::find($id);
-        return view('adminpanel.edit', compact('post'));
+
     }
 
     /**
@@ -72,16 +69,26 @@ class AdminController extends Controller
      */
     public function update(Request $request, $id): Redirector|RedirectResponse|Application
     {
-        $data = $request->validate([
+        $request->validate([
             'title' => 'required',
             'content' => 'required',
         ]);
 
         $post = Post::find($id);
-        $post->title = $data['title'];
-        $post->content = $data['content'];
-        $post->update();
+        $post->update($request->all());
 
         return redirect('adminpanel.posts');
     }
+
+    /**
+     * @param $id
+     * @return Factory|View|Application
+     */
+    public function edit($id): Factory|View|Application
+    {
+        $post = Post::find($id);
+
+        return view('adminpanel.edit', compact('post'));
+    }
+
 }

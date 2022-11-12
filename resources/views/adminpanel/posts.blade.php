@@ -115,29 +115,60 @@
     </nav>
     <div style="display: block;" class="row row-padded-mb">
 
-        <table class="table">
-            <thead>
-            <tr>
-                <th>Тема</th>
-                <th>Створенно</th>
-                <th></th>
-                <th></th>
-                <th></th>
-            </tr>
-            </thead>
-            @foreach($posts as $post)
-            <tbody>
-            <tr>
-                <td>{{$post->title}}</td>
-                <td>{{Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $post->created_at)->format('d.m.Y')}}</td>
-                <td><a href="#">Переглянути</a></td>
-                <td><a href="{{route('edit_posts')}}">Редагувати</a></td>
-                <td><a href="#">Видалити</a></td>
-            </tr>
-            </tbody>
-            @endforeach
+        <div class="card-body">
+            <div class="table-responsive pt-3">
+                <table class="table table-bordered">
+                    <thead>
+                    <tr>
+                        <th>
+                            #
+                        </th>
+                        <th>
+                            Title
+                        </th>
+                        <th>
+                            Created at
+                        </th>
+                        <th>
 
-        </table>
+                        </th>
+                        <th>
+
+                        </th>
+                        <th>
+
+                        </th>
+                    </tr>
+                    </thead>
+                    @foreach($posts as $post)
+                    <tbody>
+                    <tr>
+                        <td>
+                            {{$post->id}}
+                        </td>
+                        <td>
+                            {{$post->title}}
+                        </td>
+                        <td>
+                            {{Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $post->created_at)->format('d.m.Y')}}
+
+                        </td>
+                        <td>
+                            <a href="#">Переглянути</a>
+                        </td>
+                        <td>
+                            <a href="{{'posts/'.$post->id.'/edit'}}">Редагувати</a>
+                        </td>
+                        <td>
+                            <a href="#" onclick="return confirm('Підтвердити видалення')">Видалити</a>
+                        </td>
+                    </tr>
+                    </tbody>
+                    @endforeach
+
+                </table>
+            </div>
+        </div>
     </div>
 
 </div>
