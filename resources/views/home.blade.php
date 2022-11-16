@@ -206,9 +206,9 @@
 
                     <div class="fh5co-event">
                         <div class="date text-center"><span>{{Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $post->created_at)->format('d.M')}}<br></span></div>
-                        <h3><a href="#">{{$post->title}}</a></h3>
-                        <p>{{$post->content}}</p>
-                        <p><a href="#">Read More</a></p>
+                        <h3><a href="{{route('post_show', $post->id)}}">{{$post->title}}</a></h3>
+                        <p>{{mb_strimwidth(strip_tags($post->content),0,300,"...")}}</p>
+                        <p><a href="{{route('post_show', $post->id)}}">Read More</a></p>
                     </div>
 
                 </div>

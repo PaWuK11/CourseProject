@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
+use BeyondCode\Comments\Traits\HasComments;
+use Illuminate\Support\Facades\Auth;
 
 class CollageController extends Controller
 {
@@ -79,4 +82,16 @@ class CollageController extends Controller
     {
         return view('collage.educational_activities');
     }
+
+    /**
+     * @param $id
+     * @return Factory|View|Application
+     */
+    public function post_show($id): Factory|View|Application
+    {
+        $posts = Post::find($id);
+        return view('post', compact('posts',));
+    }
+
+
 }

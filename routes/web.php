@@ -11,6 +11,7 @@ use App\Http\Controllers\SpecialController;
 use App\Http\Controllers\StudentsController;
 use App\Http\Controllers\TeacherController;
 use App\Http\Controllers\UserController;
+use App\Models\Post;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -48,6 +49,7 @@ Route::get('/accreditation_materials',[CollageController::class, 'accreditation_
 
 Route::get('/educational_activities',[CollageController::class, 'educational_activities'])->name('educational_activities');
 
+Route::get('/post_show/{id}',[CollageController::class, 'post_show'])->name('post_show');
 //Applicant
 
 Route::get('/documents_9_class',[ApplicantController::class, 'documents_9'])->name('documents_9');
@@ -130,11 +132,17 @@ Route::group(['middleware' => 'admin'], function (){
 
     Route::post('/create',[AdminController::class, 'create_post'])->name('create_post');
 
-    Route::get('/posts/{id}',[AdminController::class, 'show'])->name('post.show');
-
-    Route::put('/posts/{id}/update', [AdminController::class, 'update']);
+    Route::put('/post/{id}', [AdminController::class, 'update'])->name('post.update');
 
     Route::get('/posts/{id}/edit',[AdminController::class, 'edit'])->name('post.edit');
+
+    Route::match(['get', 'post', 'delete'],'posts/delete/{id}',[AdminController::class, 'destroy'])->name('post.destroy');
+
+    Route::get('/user_list',[AdminController::class, 'user_list'])->name('user_list');
+
+    Route::match(['get', 'post'],'/user_block/{id}',[AdminController::class, 'block'])->name('user.block');
+
+    Route::match(['get', 'post'],'/user_unblock/{id}',[AdminController::class, 'unblock'])->name('user.unblock');
 
 });
 

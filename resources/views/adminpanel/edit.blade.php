@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Створення</title>
+    <title>Редагування  </title>
     <link rel="stylesheet" href="../../vendors4/feather/feather.css">
     <link rel="stylesheet" href="../../vendors4/mdi/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="../../vendors4/ti-icons/css/themify-icons.css">
@@ -13,6 +13,9 @@
     <link rel="stylesheet" href="../../vendors4/simple-line-icons/css/simple-line-icons.css">
     <link rel="stylesheet" href="../../vendors4/css/vendor.bundle.base.css">
     <link rel="stylesheet" href="../../css4/vertical-layout-light/style.css">
+
+    <script src="https://cdn.ckeditor.com/ckeditor5/35.3.0/classic/ckeditor.js"></script>
+
 </head>
 <body>
 <!-- partial:partials/_navbar.html -->
@@ -89,7 +92,7 @@
                     <ul class="nav flex-column sub-menu">
                         <li class="nav-item"><a class="nav-link" href="{{route('view_posts')}}">Переглянути</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{route('create_posts')}}">Створити</a></li>
-                        <li class="nav-item">Редагувати</li>
+                        <li class="nav-item"><a class="nav-link" >Редагувати</a></li>
 
                     </ul>
                 </div>
@@ -104,7 +107,7 @@
                 </a>
                 <div class="collapse" id="form-elements">
                     <ul class="nav flex-column sub-menu">
-                        <li class="nav-item"><a class="nav-link" href="pages/forms/basic_elements.html">Список</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{route('user_list')}}">Переглянути всіх</a></li>
                     </ul>
                 </div>
             </li>
@@ -113,7 +116,7 @@
 
     <div class="col-md-6 animate-box">
         <h3>Редагування статі</h3>
-        <form role="form" method="post" action="{{route('/posts/'. $post->id. '/update')}}">
+        <form role="form" method="post" action="{{route('post.update', $post->id)}}">
             @csrf
             @method('PUT')
             <div class="row form-group">
@@ -126,7 +129,16 @@
             <div class="row form-group">
                 <div class="col-md-12">
                     <!-- <label for="message">Message</label> -->
-                    <textarea name="content" id="content" cols="30" rows="10" class="form-control">{{$post->content}}</textarea>
+                    <div id="editor">
+                        <textarea name="content" id="content" cols="30" rows="10" class="form-control">{{$post->content}}</textarea>
+                    </div>
+                    <script>
+                        ClassicEditor
+                            .create( document.querySelector( '#content' ) )
+                            .catch( error => {
+                                console.error( error );
+                            } );
+                    </script>
                 </div>
             </div>
             <div class="form-group">

@@ -13,6 +13,10 @@
     <link rel="stylesheet" href="../../vendors4/simple-line-icons/css/simple-line-icons.css">
     <link rel="stylesheet" href="../../vendors4/css/vendor.bundle.base.css">
     <link rel="stylesheet" href="../../css4/vertical-layout-light/style.css">
+
+
+    <script src="https://cdn.ckeditor.com/ckeditor5/35.3.0/classic/ckeditor.js"></script>
+
 </head>
 <body>
 <!-- partial:partials/_navbar.html -->
@@ -39,9 +43,6 @@
                     <input type="text" class="form-control">
                 </div>
             </li>
-
-
-
             <li class="nav-item dropdown d-none d-lg-block user-dropdown">
                 <a class="nav-link" id="UserDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
                     {{auth()->user()->name}} </a>
@@ -102,7 +103,7 @@
                 </a>
                 <div class="collapse" id="form-elements">
                     <ul class="nav flex-column sub-menu">
-                        <li class="nav-item"><a class="nav-link" href="pages/forms/basic_elements.html">Список</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{route('user_list')}}">Переглянути всіх</a></li>
                     </ul>
                 </div>
             </li>
@@ -124,7 +125,16 @@
             <div class="row form-group">
                 <div class="col-md-12">
                     <!-- <label for="message">Message</label> -->
-                    <textarea name="content" id="content" cols="30" rows="10" class="form-control" placeholder="Основний текст"></textarea>
+                    <div id="editor">
+                        <textarea name="content" id="content" cols="30" rows="10" class="form-control"></textarea>
+                    </div>
+                    <script>
+                        ClassicEditor
+                            .create( document.querySelector( '#content' ) )
+                            .catch( error => {
+                                console.error( error );
+                            } );
+                    </script>
                 </div>
             </div>
             <div class="form-group">
@@ -134,6 +144,8 @@
     </div>
 
 </div>
+
+
 <!-- plugins:js -->
 <script src="../../vendors4/js/vendor.bundle.base.js"></script>
 <!-- endinject -->

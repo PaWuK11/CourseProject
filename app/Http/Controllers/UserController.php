@@ -34,7 +34,7 @@ class UserController extends Controller
         ]);
 
         Auth::login($user);
-        return redirect()->home();
+        return redirect()->route('home');
     }
 
     /**
@@ -59,8 +59,9 @@ class UserController extends Controller
         if (Auth::attempt([
             'email' => $request->email,
             'password' => $request->password,
+            'blocked' => 0,
         ])) {
-            return redirect()->home();
+            return redirect()->route('home');
         }
 
         return redirect()->back();

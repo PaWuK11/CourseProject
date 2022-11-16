@@ -6,6 +6,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Post;
+use App\Models\User;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Contracts\Foundation\Application;
@@ -28,7 +29,7 @@ class AdminController extends Controller
 
         $data = $request->all();
 
-        $post = Post::create($data);
+        Post::create($data);
 
         return redirect()->route('view_posts');
     }
@@ -45,7 +46,11 @@ class AdminController extends Controller
      */
     public function index(): View|Factory|Application
     {
-        return view('adminpanel.admin');
+        $users = User::where('is_admin', '0')->count();
+
+        $posts = Post::all()->count();
+
+        return view('adminpanel.admin', compact('users', 'posts'));
     }
 
     public function view_posts(): Factory|View|Application
@@ -55,12 +60,6 @@ class AdminController extends Controller
         return view('adminpanel.posts', compact('posts'));
     }
 
-
-
-    public function show()
-    {
-
-    }
 
     /**
      * @param Request $request
@@ -77,7 +76,7 @@ class AdminController extends Controller
         $post = Post::find($id);
         $post->update($request->all());
 
-        return redirect('adminpanel.posts');
+        return redirect()->route('view_posts');
     }
 
     /**
@@ -91,4 +90,54 @@ class AdminController extends Controller
         return view('adminpanel.edit', compact('post'));
     }
 
+    /**
+     * @param $id
+     * @return RedirectResponse
+     */
+    public function destroy($id): RedirectResponse
+    {
+        Post::destroy($id);
+
+        return redirect()->route('view_posts');
+    }
+
+    /**
+     * @return Factory|View|Application
+     */
+    public function user_list(): Factory|View|Application
+    {
+        $users = User::orderBy('id')->get();
+
+        return view('adminpanel.user_list', compact('users'));
+    }
+
+    /**
+     * @param $id
+     * @return RedirectResponse
+     */
+    public function block($id): RedirectResponse
+    {
+        $user = User::find($id);
+
+        $user->blocked = 1;
+
+        $user->save();
+
+        return redirect()->route('user_list');
+    }
+
+    /**
+     * @param $id
+     * @return RedirectResponse
+     */
+    public function unblock($id): RedirectResponse
+    {
+        $user = User::find($id);
+
+        $user->blocked = 0;
+
+        $user->save();
+
+        return redirect()->route('user_list');
+    }
 }

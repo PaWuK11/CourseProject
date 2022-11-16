@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Dashboard</title>
+    <title>Всі пости</title>
     <link rel="stylesheet" href="../../vendors4/feather/feather.css">
     <link rel="stylesheet" href="../../vendors4/mdi/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="../../vendors4/ti-icons/css/themify-icons.css">
@@ -35,12 +35,6 @@
         </div>
     </div>
     <div class="navbar-menu-wrapper d-flex align-items-top">
-        <ul class="navbar-nav">
-            <li class="nav-item font-weight-semibold d-none d-lg-block ms-0">
-                <h1 class="welcome-text">Вітаємо <span class="text-black fw-bold">{{auth()->user()->name}}</span>, ви
-                    увійшли в меню адміністратора</h1>
-            </li>
-        </ul>
         <ul class="navbar-nav ms-auto">
             <li class="nav-item d-none d-lg-block">
                 <div id="datepicker-popup" class="input-group date datepicker navbar-date-picker">
@@ -81,7 +75,12 @@
                     <span class="menu-title">Dashboard</span>
                 </a>
             </li>
-
+            <li class="nav-item">
+                <a class="nav-link" href="{{route('home')}}">
+                    <i class="menu-icon mdi mdi-card-text-outline"></i>
+                    <span class="menu-title">На головну</span>
+                </a>
+            </li>
             <li class="nav-item nav-category">Пости</li>
             <li class="nav-item">
                 <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false"
@@ -111,67 +110,87 @@
                         <li class="nav-item"><a class="nav-link" href="{{route('user_list')}}">Переглянути всіх</a></li>
                     </ul>
                 </div>
+            </li>
         </ul>
     </nav>
-    <!-- partial -->
-    <div class="main-panel">
-        <div class="content-wrapper">
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="home-tab">
-                        <div class="tab-content tab-content-basic">
-                            <div class="tab-pane fade show active" id="overview" role="tabpanel"
-                                 aria-labelledby="overview">
-                                <div class="row">
-                                    <div class="col-sm-12">
-                                        <div
-                                            class="statistics-details d-flex align-items-center justify-content-between">
-                                            <div>
-                                                <p class="statistics-title">Пости</p>
-                                                <h3 class="rate-percentage">{{ $posts }}</h3>
-                                            </div>
-                                            <div>
-                                                <p class="statistics-title">Користувачів</p>
-                                                <h3 class="rate-percentage">{{ $users }}</h3>
+    <div style="display: block;" class="row row-padded-mb">
 
-                                            </div>
-                                            <div class="d-none d-md-block">
-                                                <p class="statistics-title">Середній час проведення на сайті</p>
-                                                <h3 class="rate-percentage">2m:35s</h3>
-                                            </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+        <div class="card-body">
+            <div class="table-responsive pt-3">
+                <table class="table table-bordered">
+                    <thead>
+                    <tr>
+                        <th>
+                            #
+                        </th>
+                        <th>
+                            Ім'я
+                        </th>
+                        <th>
+                            Пошта
+                        </th>
+                        <th>
+                            Створенно
+                        </th>
+                        <th>
+                            Блокування
+                        </th>
+                    </tr>
+                    </thead>
+                    @foreach($users as $user)
+                        <tbody>
+                        <tr>
+                            <td>
+                                {{$user->id}}
+                            </td>
+                            <td>
+                                {{$user->name}}
+                            </td>
+                            <td>
+                                {{$user->email}}
+                            </td>
+                            <td>
+                                {{Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $user->created_at)->format('m.d.Y')}}
 
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                            </td>
+                            <td>
+                                @if($user->blocked == 0)
+                                <a href="{{route('user.block', $user->id)}}" onclick="return confirm('Підтвердити блокування')">Блокувати</a>
+                                @else
+                                <a href="{{route('user.unblock', $user->id)}}" onclick="return confirm('Підтвердити розблокування')">Розблокувати</a>
+                                @endif
+                            </td>
+                        </tr>
+                        </tbody>
+                    @endforeach
+
+                </table>
             </div>
         </div>
     </div>
-        <!-- plugins:js -->
-                <script src="../../vendors4/js/vendor.bundle.base.js"></script>
-                <!-- endinject -->
-                <!-- Plugin js for this page -->
-                <script src="../../vendors4/chart.js/Chart.min.js"></script>
-                <script src="../../vendors4/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
-                <script src="../../vendors4/progressbar.js/progressbar.min.js"></script>
 
-                <!-- End plugin js for this page -->
-                <!-- inject:js -->
-                <script src="../../js4/off-canvas.js"></script>
-                <script src="../../js4/hoverable-collapse.js"></script>
-                <script src="../../js4/template.js"></script>
-                <script src="../../js4/settings.js"></script>
-                <script src="../../js4/todolist.js"></script>
-                <!-- endinject -->
-                <!-- Custom js for this page-->
-                <script src="../../js4/jquery.cookie.js" type="text/javascript"></script>
-                <script src="../../js4/dashboard.js"></script>
-                <script src="../../js4/Chart.roundedBarCharts.js"></script>
-                <!-- End custom js for this page-->
+</div>
+<!-- plugins:js -->
+<script src="../../vendors4/js/vendor.bundle.base.js"></script>
+<!-- endinject -->
+<!-- Plugin js for this page -->
+<script src="../../vendors4/chart.js/Chart.min.js"></script>
+<script src="../../vendors4/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+<script src="../../vendors4/progressbar.js/progressbar.min.js"></script>
+
+<!-- End plugin js for this page -->
+<!-- inject:js -->
+<script src="../../js4/off-canvas.js"></script>
+<script src="../../js4/hoverable-collapse.js"></script>
+<script src="../../js4/template.js"></script>
+<script src="../../js4/settings.js"></script>
+<script src="../../js4/todolist.js"></script>
+<!-- endinject -->
+<!-- Custom js for this page-->
+<script src="../../js4/jquery.cookie.js" type="text/javascript"></script>
+<script src="../../js4/dashboard.js"></script>
+<script src="../../js4/Chart.roundedBarCharts.js"></script>
+<!-- End custom js for this page-->
 
 </body>
 </html>

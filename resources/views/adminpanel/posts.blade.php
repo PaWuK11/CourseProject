@@ -107,7 +107,7 @@
                 </a>
                 <div class="collapse" id="form-elements">
                     <ul class="nav flex-column sub-menu">
-                        <li class="nav-item"><a class="nav-link" href="pages/forms/basic_elements.html">Список</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{route('user_list')}}">Переглянути всіх</a></li>
                     </ul>
                 </div>
             </li>
@@ -124,13 +124,10 @@
                             #
                         </th>
                         <th>
-                            Title
+                            Заголовок
                         </th>
                         <th>
-                            Created at
-                        </th>
-                        <th>
-
+                            Створенно
                         </th>
                         <th>
 
@@ -150,17 +147,14 @@
                             {{$post->title}}
                         </td>
                         <td>
-                            {{Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $post->created_at)->format('d.m.Y')}}
+                            {{Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $post->created_at)->format('m.d.Y')}}
 
                         </td>
                         <td>
-                            <a href="#">Переглянути</a>
+                            <a href="{{route('post.edit', $post->id)}}">Редагувати</a>
                         </td>
                         <td>
-                            <a href="{{'posts/'.$post->id.'/edit'}}">Редагувати</a>
-                        </td>
-                        <td>
-                            <a href="#" onclick="return confirm('Підтвердити видалення')">Видалити</a>
+                            <a href="{{route('post.destroy', $post->id)}}" onclick="return confirm('Підтвердити видалення')">Видалити</a>
                         </td>
                     </tr>
                     </tbody>

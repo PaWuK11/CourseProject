@@ -119,7 +119,7 @@
                                     <li><a href="{{route('admin')}}"><span style="font-size: 20px; color: #0b0b0b;">{{auth()->user()->name}}</span></li>
                                     <li class="btn-cta"><a href="{{route('logout')}}"></a></li>
                                 @else
-                                    <li><a href="{{route('home')}}"><span style="font-size: 20px; color: #0b0b0b;">{{auth()->user()->name}}</span></li>
+                                    <li><a href="{{route('logout')}}"><span style="font-size: 20px; color: #0b0b0b;">{{auth()->user()->name}}</span></li>
                                     <li class="btn-cta"><a href="{{route('logout')}}"></a></li>
                                 @endif
                             @else
