@@ -4,16 +4,29 @@ namespace App\Http\Controllers;
 
 
 use App\Mail\ContactMail;
+use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\View\View;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Redirector;
 use Illuminate\Support\Facades\Mail;
 
 class ContactController extends Controller
 {
-    public function contact(){
+    /**
+     * @return Factory|View|Application
+     */
+    public function contact(): Factory|View|Application
+    {
         return view('pub_info.contact');
     }
 
-    public function send(Request $request)
+    /**
+     * @param Request $request
+     * @return View|Factory|Redirector|RedirectResponse|Application
+     */
+    public function send(Request $request): View|Factory|Redirector|RedirectResponse|Application
     {
         $request->validate([
             'fname'=>'required|string',
