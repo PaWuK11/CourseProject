@@ -56,9 +56,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xs-3" style="font-size: 17px">
-                        <div id="fh5co-logo"><a href="{{route('home')}}"><span class="icon-MBFC"></span>Маріупольський будівельний фаховий коледж</a></div>
+                        <div id="fh5co-logo"><a href="{{route('home')}}"><img src="../../images/icon.png" width="90" height="90"> Маріупольський будівельний фаховий коледж</a></div>
                     </div>
-                    <div class="col-xs-9 text-right menu-1" style="padding-top: 25px;">
+                    <div class="col-xs-9 text-right menu-1" style="padding-top: 90px;">
                         <ul>
                             <li class="active"><a href="{{route('home')}}">Головна</a></li>
                             <li class="has-dropdown">
