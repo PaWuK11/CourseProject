@@ -33,22 +33,13 @@
             <h2><span>Коментарі</span></h2>
         </div>
     </div>
-    <div style="padding-left: 400px; padding-right: 400px; padding-top: 20px; color: black; " class="col-md-12">
-        <!-- <label for="message">Message</label> -->
-        <div id="editor">
-            <textarea name="comment" id="comment" cols="30" rows="10" class="form-control"></textarea>
-        </div>
-        <script>
-            ClassicEditor
-                .create( document.querySelector( '#comment' ) )
-                .catch( error => {
-                    console.error( error );
-                } );
-        </script>
-        <div style="padding-top: 10px; padding-left: 940px">
-            <input type="submit" value="Прокоментувати" class="btn btn-primary">
+
+    <div>
+        <div class="row" style="padding-left: 400px; padding-right: 400px">
+            @comments(['model' => $posts])
         </div>
     </div>
+
 
     <div id="fh5co-about">
         <div style="font-size: 18px" class="container">
